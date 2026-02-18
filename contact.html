@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | HARJAYSHU Web Studio</title>
+
+  <link rel="stylesheet" href="cstyle.css">
+</head>
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      HARJAYSHU <span>Web Studio</span>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="active">Contact</a>
+       <a href="website-banwane-ka-price.html">Blog</a>
+    </nav>
+
+    <a href="contact.html" class="nav-btn">Hire Me</a>
+  </header>
+
+  <!-- ✅ HERO -->
+  <section class="page-hero">
+    <h1>Contact Me</h1>
+    <p>Let’s build your business online 🚀</p>
+  </section>
+
+  <!-- ✅ CONTACT SECTION -->
+  <section class="contact-section">
+
+    <h2 class="title">Get In Touch</h2>
+
+    <div class="contact-container">
+
+      <!-- Left Info -->
+      <div class="contact-info">
+        <h3>📌 HARJAYSHU Web Studio</h3>
+        <p>
+          I design premium websites, branding & SEO solutions  
+          for businesses and creators.
+        </p>
+
+        <p><b>📍 Location:</b> India</p>
+        <p><b>📧 Email:</b> jayjay17989@gmail.com </p>
+        <p><b>📞 Phone:</b> +91 70677 63466</p>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/+917067763466" target="_blank" class="whatsapp-btn">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Right Form -->
+      <div class="contact-form">
+        <h3>Send a Message ✨</h3><form id="whatsappForm">
+
+  <input type="text" id="name" placeholder="Your Name" required>
+
+  <input type="email" id="email" placeholder="Your Email" required>
+
+  <textarea id="message" placeholder="Your Message..." required></textarea>
+
+  <button type="submit">Send Message 🚀</button>
+
+</form>
+
+        
+
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    © 2026 HARJAYSHU Web Studio | Designed with ❤️
+  </footer>
+  <script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Values लेना
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    // आपका WhatsApp नंबर
+    let phoneNumber = "917067763466";
+
+    // ✅ Professional Message Format
+    let whatsappMessage =
+      `📩 *New Website Inquiry* %0A%0A` +
+      `━━━━━━━━━━━━━━%0A` +
+      `👤 *Client Name:* ${name}%0A` +
+      `📧 *Email:* ${email}%0A` +
+      `💬 *Message:* %0A${message}%0A` +
+      `━━━━━━━━━━━━━━%0A%0A` +
+      `⭐ Sent from HARJAYSHU Web Studio Contact Form`;
+
+    // WhatsApp URL
+    let url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    // Open WhatsApp
+    window.open(url, "_blank");
+
+    // Form Reset
+    document.getElementById("whatsappForm").reset();
+  });
+</script>
+</body>
+</html>

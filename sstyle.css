@@ -1,0 +1,246 @@
+/* ===========================
+   ✅ GLOBAL RESET
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0b0b0f;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ===========================
+   ✅ NAVBAR (Same All Pages)
+=========================== */
+.navbar {
+  width: 100%;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: gold;
+}
+
+.logo span {
+  color: white;
+  font-weight: 400;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 35px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* Hover Effect */
+.menu a:hover {
+  color: gold;
+}
+
+/* Active Page Underline */
+.menu a.active {
+  color: gold;
+}
+
+.menu a.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: gold;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 10px;
+}
+
+/* Button */
+.nav-btn {
+  padding: 12px 22px;
+  background: gold;
+  color: black;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   ✅ PAGE HERO (Services Top)
+=========================== */
+.page-hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #000, #111);
+}
+
+.page-hero h1 {
+  font-size: 55px;
+  color: gold;
+  font-weight: 700;
+}
+
+.page-hero p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* ===========================
+   ✅ SERVICES SECTION
+=========================== */
+.services-section {
+  padding: 90px 70px;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 38px;
+  margin-bottom: 55px;
+  color: white;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255,255,255,0.05);
+  padding: 35px 25px;
+  border-radius: 22px;
+  transition: 0.35s;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Heading */
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: gold;
+}
+
+/* Paragraph */
+.service-card p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+/* Hover Animation */
+.service-card:hover {
+  transform: translateY(-12px);
+  border: 1px solid gold;
+  background: rgba(255,215,0,0.08);
+}
+
+/* ===========================
+   ✅ CTA SECTION
+=========================== */
+.cta {
+  padding: 90px 20px;
+  text-align: center;
+  background: gold;
+  color: black;
+}
+
+.cta h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.cta p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 35px;
+  border-radius: 30px;
+  background: black;
+  color: gold;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   ✅ FOOTER
+=========================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ===========================
+   ✅ RESPONSIVE (Mobile Fix)
+=========================== */
+@media(max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .page-hero h1 {
+    font-size: 40px;
+  }
+
+  .services-section {
+    padding: 60px 25px;
+  }
+
+  .cta h2 {
+    font-size: 30px;
+  }
+}
